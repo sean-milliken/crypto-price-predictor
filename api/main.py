@@ -3,10 +3,20 @@ import joblib
 import pandas as pd
 import yfinance as yf
 
+from fastapi.middleware.cors import CORSMiddleware
+
 # Load trained model and feature list
 model, features = joblib.load("models/rf_model.joblib")
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # allow all origins (for demo/hackathon)
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 def get_features(symbol: str):
     """Fetch latest feature values for a given crypto symbol."""

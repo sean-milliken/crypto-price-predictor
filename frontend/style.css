@@ -1,0 +1,81 @@
+/* Import Montserrat font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  padding: 40px;
+  max-width: 600px;
+  margin: auto;
+  background-color: #090a0af5; /* dark background */
+  color: #ffffff; /* default text color */
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff;
+}
+
+input, button {
+  padding: 10px;
+  font-size: 16px;
+  margin: 5px 0;
+  border-radius: 6px;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: #1c1c1c;
+  color: #ffffff;
+  border: 1px solid #333;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50; /* green button */
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-align : center;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#result {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #1c1c1c; /* dark card background */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  white-space: pre-wrap;
+  color: #ffffff;
+}
+
+canvas {
+  margin-top: 20px;
+  background-color: #1c1c1c;
+  border-radius: 8px;
+}
+
+/* Wrap input and button in a flex container */
+.input-group {
+  display: flex;
+  gap: 10px; /* space between input and button */
+  margin-bottom: 10px;
+}
+
+/* Make input grow to fill remaining space */
+.input-group input {
+  flex: 1;
+}
+
+/* Keep button height matching input */
+.input-group button {
+  height: 40px; /* adjust as needed */
+  padding: 0 20px;
+}
+
